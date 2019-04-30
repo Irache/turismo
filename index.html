@@ -1,1 +1,106 @@
-<div id="root"></div>
+<head>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3plus/1.9.2/d3plus.full.min.js"></script>
+</head> 
+ 
+ <h1>Seminario visualización</h1>
+ Nombre: Irache Garamendi <br>
+ Url: <a href ="https://js-axue8c.stackblitz.io"> Proyecto stackblitz: "https://js-axue8c.stackblitz.io</a><br>
+
+ <h1>Objetivo</h1>
+Realizar un estudio de parte del turismo en España durante el año 2018.<br><br>
+Realizar el seminario de visualización de datos. A partir de un data set, se quiere dar respuesta a ciertas preguntas. Para ello se hace uso de visualizaciones.<br><br>
+En este trabajo se mostrarán las dificultades encontradas al trabajar con gran cantidad de datos en la visualización, cómo manejar esos datos, y cómo mostrar información a una audiencia.<br><br>
+<b>Audiencia</b><br><br>
+Principalmente la audiencia será el profesor de la asignatura, y ocasionalmente estudiantes del máster: Big Data Data Sciencie.<br><br>
+Aunque se pretende hacer una exposición sencilla a partir de multitud de datos, también se podría considerar una audiencia al sector periodistico, a futuros viajeros, y a personal del sector turístico Español.<br><br>
+<b>Herramientas</b><br><br>
+Se hace uso de Tableau para las visualizaciones, por su facilidad de manejo, y porque se usó en la asignatura, a modo de práctica. Así se quiere afianzar los conocimientos adquiridos.<br><br>
+Se usa excel en un primer momento para hacer un primer estudio de los datos. Los datos se sacan en bruto del Instituto nacional de Estdística y hay que hacer un primer estudio para ver el tipo de dato, cómo están distribuidos, si se puede hacer alguna agrupación previa, si es mejor realizar algún cálculo en concreto.<br><br>
+Se usa stackblitz para realizar la visualización web del proyecto completo.<br><br>
+
+ <h1>¿Dónde y cuándo viajar más barato en España?</h1>
+
+A partir de los datos recogidos por es Instituto Nacional de Estadística se pretende hacer un estudio sobre el sector turístico en España. Se dice que el sector turístico es un motor muy importante dentro del territorio Español. Pero se cumplen los mitos sobre los precios: ¿suben en verano por igual en todas las comunidades autónomas?, ¿el sector hotelero es el que mueve un mayor número de turistas?<br><br>
+Datos recopilados del Instituto Nacional de Estadística: <a href ="http://www.ine.es/dyngs/INEbase/categoria.htm?c=Estadistica_P&cid=1254735576863">http://www.ine.es/dyngs/INEbase/categoria.htm?c=Estadistica_P&cid=1254735576863</a><br> <br>
+
+<b>Hablando sobre turismo</b><br><br>
+<b>¿Cuándo hay más movimiento de turistas en España?</b><br><br>
+Se visualiza el número de viajes que tienen lugar en España por trimestre:<br>
+<ul>
+<li>Primer trimestre: enero, febrero, marzo.</li><br>
+<li>Segundo trimestre: abril, mayo, junio.</li><br>
+<li>Tercer trimestre: julio, agosto, septiembre.</li><br>
+<li>Cuarto trimestre: octubre, noviembre, diciembre.</li><br>
+</ul>
+<img src="https://raw.githubusercontent.com/Irache/AG1-07Visualizacion/Pr%C3%A1ctica/Hoja2.png" alt="Num. viajes por trimestre" border="2"> <br><br>
+El mayor número de viajeros se mueve los meses de julio, agosto y septiembre.<br>
+Es decir, si buscas encontrar un menor número de turistas elige (y puedes) viajar en octubre, noviembre o diciembre.<br
+Dividiendo por tipo de alojamiento se puede hacer la siguiente clasificación:<br><br>
+<ul>
+<li>Hoteles.</li><br>
+<li>Camping.</li><br>
+<li>Apartamentos.</li><br>
+<li>Albergues.</li><br>
+</ul>
+<b>¿Ocupación hotelera?</b><br><br>
+Los datos que se van a mostrar son los recogidos por la encuesta de ocupación hotelera.
+Ofrece información sobre viajeros, pernoctaciones y estancia media, distribuidos por país de residencia para los viajeros 
+extranjeros o comunidad autónoma de procedencia para los viajeros españoles,así como la categoría de los establecimientos que ocupan. 
+También proporciona estimaciones del número de establecimientos abiertos, plazas, grado de ocupación y empleo en el sector, 
+según categoría del establecimiento. es una medida estadística de la evolución del conjunto de precios aplicados 
+por los empresarios a los distintos clientes que se alojan en los hoteles de España. 
+Mide, por tanto, la evolución de los precios del sector desde la óptica de la oferta.
+Se recopilan datos del año 2018.<br>
+He seleccionado estos datos por la dificultad en su representación al encontrarse con un gran número de datos 62 provincias y 12 meses.<br>
+En este caso si hacemos una representación clásica de barras habría demasiada información y el destinatario de la visualización se puede perder en el mar de datos. Para ejemplificar este problema vease la figura 1:
+<img src="https://raw.githubusercontent.com/Irache/js-axue8c/master/hoteles%20ocupacion%20orden1.png" alt="Num. ocupación hoteles" border="2"><br><br>
+Para resolver este problema se hace un filtrado de los datos mostrando aquellos significativos dentro de los datos.
+
+<ul>
+<li>Enero: Santa Cruz de Tenerife, Canarias, Las Palmas, Ceuta, Madrid, Alicante, Sevilla, Barcelona, Melilla, Málaga.</li><br>
+<li>Febrero:  Santa Cruz de Tenerife, Canarias, Las Palmas, Ceuta, Madrid, Sevilla, Alicante, Barcelona, Valencia, Granada.</li><br>
+<li>Marzo: Las Palmas, Canarias, Santa Cruz de Tenerife, Alicante, Sevilla, Madrid, Barcelona, Valencia, Islas Baleares, Ceuta.</li><br>
+<li>Abril: Las Palmas, Canarias, Santa Cruz de Tenerife,, Sevilla, Alicante, Barcelona, Islas Baleares, Ceuta, Madrid, Valencia.</li><br>
+<li>Mayo: Las Palmas, Sevilla, Islas Baleares, Santa Cruz de Tenerife, Barcelona, Alicante, Ceuta, Málaga, Madrid.</li><br>
+<li>Junio: Islas Baleares, Las Palmas, Canarias, Alicante, Santa Cruz de Tenerife,, Barcelona, Málaga, Tarragona, Valencia, Ceuta.</li><br>
+<li>Julio: Islas Baleares, Las Palmas, Canarias, Santa Cruz de Tenerife, Alicante, Ceuta, Tarragona, Guipuzcoa, Barcelona, Málaga.</li><br>
+<li>Agosto: Islas Baleares,Ceuta, Las Palmas, Canarias, Santa Cruz de Tenerife, Tarragona, Alicante, Guipuzcoa, Cádiz, Vizcaya.</li><br>
+<li>Septiembre: Islas Baleares, Las Palmas, Alicante, Canarias, Santa Cruz de Tenerife,, Barcelona, Valencia, Tarragona, Málaga, Guipuzcoa.</li><br>
+<li>Octubre: Las Palmas, Canarias, Santa Cruz de Tenerife,, ALicante, Sevilla, Barcelona, Madrid, Islas Baleares, Valencia, Vizcaya.</li><br>
+<li>Noviembre: Santa Cruz de Tenerife,, Canarias, Las Palmas, Ceuta, Madrid, Sevilla, Alicante, Barcelona, Valencia, Vizcaya.</li><br>
+<li>Diciembre: Santa Cruz de Tenerife, Canarias, Las Palmas, Ceuta, Madrid, Sevilla, Barcelona, Alicante, Granada, Vizcaya.</li><br>
+</ul>
+
+<img src="https://raw.githubusercontent.com/Irache/js-axue8c/master/enero.png" alt="Diez primeros destinos. Mes: Enero" border="2"><br><br>
+<img src="https://raw.githubusercontent.com/Irache/js-axue8c/master/febrero.png" alt="Diez primeros. destinos Mes: Febrero" border="2"><br><br>
+<img src="https://raw.githubusercontent.com/Irache/js-axue8c/master/marzo.png" alt="Diez primeros destinos. Mes: Marzo" border="2"><br><br>
+<img src="https://raw.githubusercontent.com/Irache/js-axue8c/master/abril.png" alt="Diez primeros destinos. Mes: Abril" border="2"><br><br>
+<img src="https://raw.githubusercontent.com/Irache/js-axue8c/master/mayo.png" alt="Diez primeros destinos. Mes: Mayo" border="2"><br><br>
+<img src="https://raw.githubusercontent.com/Irache/js-axue8c/master/junio.png" alt="Diez primeros destinos. Mes: Junio" border="2"><br><br>
+<img src="https://raw.githubusercontent.com/Irache/js-axue8c/master/julio.png" alt="Diez primeros destinos. Mes: Julio" border="2"><br><br>
+<img src="https://raw.githubusercontent.com/Irache/js-axue8c/master/agosto.png" alt="Diez primeros destinos. Mes: Agosto" border="2"><br><br>
+<img src="https://raw.githubusercontent.com/Irache/js-axue8c/master/septiembre.png" alt="Diez primeros destinos. Mes: Septiembre" border="2"><br><br>
+<img src="https://raw.githubusercontent.com/Irache/js-axue8c/master/octubre.png" alt="Diez primeros destinos. Mes: Octubre" border="2"><br><br>
+<img src="https://raw.githubusercontent.com/Irache/js-axue8c/master/noviembre.png" alt="Diez primeros destinos. Mes: Noviembre" border="2"><br><br>
+<img src="https://raw.githubusercontent.com/Irache/js-axue8c/master/Diciembre.png" alt="Diez primeros destinos. Mes: Diciembre" border="2"><br><br>
+
+<b>¿Niveles de ocupación en España?</b><br><br>
+<b>¿Ocupación hotelera?</b><br><br>
+Los datos que se van a mostrar son los recogidos por el "Índice de precios hoteleros" es una medida estadística de la evolución del conjunto de precios aplicados por los empresarios a los distintos clientes que se alojan en los hoteles de España. Mide, por tanto, la evolución de los precios del sector desde la óptica de la oferta.
+Se recopilan datos del año 2018.<br>
+
+<img src="https://raw.githubusercontent.com/Irache/js-axue8c/master/Indice%20precio%20%25%20Enero%202018.png"  alt="Nivel % ocupación. Mes: Enero" border="2"><br><br>
+<img src="https://raw.githubusercontent.com/Irache/js-axue8c/master/Indice%20precio%20%25%20Febrero%202018.png"  alt="Nivel % ocupación. destinos Mes: Febrero" border="2"><br><br>
+<img src="https://raw.githubusercontent.com/Irache/js-axue8c/master/Indice%20precio%20%25%20Marzo%202018.png"  alt="Nivel % ocupación destinos. Mes: Marzo" border="2"><br><br>
+<img src="https://raw.githubusercontent.com/Irache/js-axue8c/master/Indice%20precio%20%25%20Abril%202018.png" alt="Nivel % ocupación. Mes: Abril" border="2"><br><br>
+<img src="https://raw.githubusercontent.com/Irache/js-axue8c/master/Indice%20precio%20%25%20Mayo%202018.png"  alt="Nivel % ocupación. Mes: Mayo" border="2"><br><br>
+<img src="https://raw.githubusercontent.com/Irache/js-axue8c/master/Indice%20precio%20%25%20Junio%202018.png"  alt="Nivel % ocupación. Mes: Junio" border="2"><br><br>
+<img src="https://raw.githubusercontent.com/Irache/js-axue8c/master/Indice%20precio%20%25%20Julio%202018.png"  alt="Nivel % ocupación. Mes: Julio" border="2"><br><br>
+<img src="https://raw.githubusercontent.com/Irache/js-axue8c/master/Indice%20precio%20%25%20Agosto%202018.png"  alt="Nivel % ocupación. Mes: Agosto" border="2"><br><br>
+<img src="https://raw.githubusercontent.com/Irache/js-axue8c/master/Indice%20precio%20%25%20Septiembre%202018.png"  alt="Nivel % ocupación. Mes: Septiembre" border="2"><br><br>
+<img src="https://raw.githubusercontent.com/Irache/js-axue8c/master/Indice%20precio%20%25%20Octubre%202018.png"  alt="Nivel % ocupación. Mes: Octubree" border="2"><br><br>
+<img src="https://raw.githubusercontent.com/Irache/js-axue8c/master/Indice%20precio%20%25%20Noviembre%202018.png"  alt="Nivel % ocupación. Mes: Noviembre" border="2"><br><br>
+<img src="https://raw.githubusercontent.com/Irache/js-axue8c/master/Indice%20precio%20%25%20Diciembre%202018.png"  alt="DNivel % ocupación. Mes: Diciembre" border="2"><br><br>
+
