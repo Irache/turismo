@@ -49,30 +49,28 @@ Los datos que se van a mostrar son los recogidos por la encuesta de ocupación h
 Ofrece información sobre viajeros, pernoctaciones y estancia media, distribuidos por país de residencia para los viajeros 
 extranjeros o comunidad autónoma de procedencia para los viajeros españoles,así como la categoría de los establecimientos que ocupan. 
 También proporciona estimaciones del número de establecimientos abiertos, plazas, grado de ocupación y empleo en el sector, 
-según categoría del establecimiento. es una medida estadística de la evolución del conjunto de precios aplicados 
-por los empresarios a los distintos clientes que se alojan en los hoteles de España. 
-Mide, por tanto, la evolución de los precios del sector desde la óptica de la oferta.
-Se recopilan datos del año 2018.<br>
+según categoría del establecimiento. <br>
 He seleccionado estos datos por la dificultad en su representación al encontrarse con un gran número de datos 62 provincias y 12 meses.<br>
 En este caso si hacemos una representación clásica de barras habría demasiada información y el destinatario de la visualización se puede perder en el mar de datos. Para ejemplificar este problema vease la figura 1:
 <img src="https://raw.githubusercontent.com/Irache/js-axue8c/master/hoteles%20ocupacion%20orden1.png" alt="Num. ocupación hoteles" border="2"><br><br>
-Para resolver este problema se hace un filtrado de los datos mostrando aquellos significativos dentro de los datos.
+Para resolver este problema se hace un filtrado de los datos mostrando aquellos significativos dentro de los datos. Me he centrado al final en las comunidades autónomas, por lo que he hecho uso de una agrupación. de datos. Numericamente los datos son:
+<br><br>
 
 <ul>
-<li>Enero: Santa Cruz de Tenerife, Canarias, Las Palmas, Ceuta, Madrid, Alicante, Sevilla, Barcelona, Melilla, Málaga.</li><br>
-<li>Febrero:  Santa Cruz de Tenerife, Canarias, Las Palmas, Ceuta, Madrid, Sevilla, Alicante, Barcelona, Valencia, Granada.</li><br>
-<li>Marzo: Las Palmas, Canarias, Santa Cruz de Tenerife, Alicante, Sevilla, Madrid, Barcelona, Valencia, Islas Baleares, Ceuta.</li><br>
-<li>Abril: Las Palmas, Canarias, Santa Cruz de Tenerife,, Sevilla, Alicante, Barcelona, Islas Baleares, Ceuta, Madrid, Valencia.</li><br>
-<li>Mayo: Las Palmas, Sevilla, Islas Baleares, Santa Cruz de Tenerife, Barcelona, Alicante, Ceuta, Málaga, Madrid.</li><br>
-<li>Junio: Islas Baleares, Las Palmas, Canarias, Alicante, Santa Cruz de Tenerife, Barcelona, Málaga, Tarragona, Valencia, Ceuta.</li><br>
-<li>Julio: Islas Baleares, Las Palmas, Canarias, Santa Cruz de Tenerife, Alicante, Ceuta, Tarragona, Guipuzcoa, Barcelona, Málaga.</li><br>
-<li>Agosto: Islas Baleares,Ceuta, Las Palmas, Canarias, Santa Cruz de Tenerife, Tarragona, Alicante, Guipuzcoa, Cádiz, Vizcaya.</li><br>
-<li>Septiembre: Islas Baleares, Las Palmas, Alicante, Canarias, Santa Cruz de Tenerife, Barcelona, Valencia, Tarragona, Málaga, Guipuzcoa.</li><br>
-<li>Octubre: Las Palmas, Canarias, Santa Cruz de Tenerife,, ALicante, Sevilla, Barcelona, Madrid, Islas Baleares, Valencia, Vizcaya.</li><br>
-<li>Noviembre: Santa Cruz de Tenerife,, Canarias, Las Palmas, Ceuta, Madrid, Sevilla, Alicante, Barcelona, Valencia, Vizcaya.</li><br>
-<li>Diciembre: Santa Cruz de Tenerife, Canarias, Las Palmas, Ceuta, Madrid, Sevilla, Barcelona, Alicante, Granada, Vizcaya.</li><br>
+<li>Enero: Canarias, Ceuta, Madrid.</li><br>
+<li>Febrero: Canarias, Ceuta, Madrid.</li><br>
+<li>Marzo: Canarias, Madrid, Valencia.</li><br>
+<li>Abril: Canarias, Islas Baleares, Ceuta.</li><br>
+<li>Mayo: Canarias, Islas Baleares, Ceuta.</li><br>
+<li>Junio: Islas Baleares, Canarias, Valencia.</li><br>
+<li>Julio: Islas Baleares, Canarias, Comunidad Valenciana.</li><br>
+<li>Agosto: Islas Baleares, Canarias,Ceuta.</li><br>
+<li>Septiembre: Islas Baleares, Canarias, Valencia.</li><br>
+<li>Octubre: Canarias, Madrid, Islas Baleares.</li><br>
+<li>Noviembre: Canarias, Ceuta, Madrid.</li><br>
+<li>Diciembre: Canarias, Ceuta, Madrid.</li><br>
 </ul>
-
+Visualmente:
 <img src="https://raw.githubusercontent.com/Irache/turismo/master/enero.png" alt="Diez primeros destinos. Mes: Enero" border="2"><br><br>
 <img src="https://raw.githubusercontent.com/Irache/turismo/master/febrero.png" alt="Diez primeros. destinos Mes: Febrero" border="2"><br><br>
 <img src="https://raw.githubusercontent.com/Irache/turismo/master/marzo.png" alt="Diez primeros destinos. Mes: Marzo" border="2"><br><br>
@@ -84,7 +82,9 @@ Para resolver este problema se hace un filtrado de los datos mostrando aquellos 
 <img src="https://raw.githubusercontent.com/Irache/turismo/master/septiembre.png" alt="Diez primeros destinos. Mes: Septiembre" border="2"><br><br>
 <img src="https://raw.githubusercontent.com/Irache/turismo/master/octubre.png" alt="Diez primeros destinos. Mes: Octubre" border="2"><br><br>
 <img src="https://raw.githubusercontent.com/Irache/turismo/master/noviembre.png" alt="Diez primeros destinos. Mes: Noviembre" border="2"><br><br>
-<img src="https://raw.githubusercontent.com/Irache/turismo/master/Diciembre.png" alt="Diez primeros destinos. Mes: Diciembre" border="2"><br><br>
+<img src="https://raw.githubusercontent.com/Irache/turismo/master/diciembre.png" alt="Diez primeros destinos. Mes: Diciembre" border="2"><br><br>
+
+Como se puede ver el grado de ocupación mayor se da en las Islas. Entiendo esto como que hay un número más limitado de hoteles, y un mayor número de visitantes.
 
 <b>¿Índice de precios?</b><br><br>
 <b>¿Cómo varían los precios es España?</b><br><br>
@@ -102,5 +102,9 @@ Se recopilan datos del año 2018.<br>
 <img src="https://raw.githubusercontent.com/Irache/turismo/master/IndicprecioSeptiembre%202018.png"  alt="Nivel % ocupación. Mes: Septiembre" border="2"><br><br>
 <img src="https://raw.githubusercontent.com/Irache/turismo/master/IndiceprecioOctubre%202018.png"  alt="Nivel % ocupación. Mes: Octubree" border="2"><br><br>
 <img src="https://raw.githubusercontent.com/Irache/turismo/master/IndiceprecioNoviembre%202018.png"  alt="Nivel % ocupación. Mes: Noviembre" border="2"><br><br>
-<img src="https://raw.githubusercontent.com/Irache/turismo/master/IndiceprecioDiciembre%202018.png"  alt="DNivel % ocupación. Mes: Diciembre" border="2"><br><br>
+<img src="https://raw.githubusercontent.com/Irache/turismo/master/IndiceprecioDiciembre%202018.png"  alt="Nivel % ocupación. Mes: Diciembre" border="2"><br><br>
 
+Conclusiones sobre los precios de los hoteles, la comunidad con un mayor índice de precios es Las Islas Baleares. Los meses de mayor índice son los meses de mayo a septiembre, coincidiendo con los meses de mayor demeanda como se había visto en el primer gráfico.<br><br>
+No se cumple que para todas las comunidades con mayor indice de ocupación sean las mas caras, por ejemplo la comunidad Valenciana es la tercera más cara en enero sin embargo su ocupación no es la tercera mayor, para el mismo mes.<br><br>
+La comunidad con un menor número de ocupación es Castilla La Mancha.<br><br>
+<img src="https://raw.githubusercontent.com/Irache/turismo/master/ocupaci%C3%B3n_comunidad.JPG"  alt="Linea temporal de ocupación por comunidad autónoma" border="2"><br><br>
